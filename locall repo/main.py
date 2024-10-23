@@ -21,6 +21,9 @@ def procces_camand(c):
         webbrowser.open("https://facebook.com")
     if "open canva" in c.lower():
         webbrowser.open("https://canva.com")
+    if "open chatgpt" in c.lower():
+        webbrowser.open("https://chatgpt.com")
+
     # if "open google sheet" in c.lower():
     #     webbrowser.open("docs.google.com")
     # print(c)
@@ -38,10 +41,10 @@ if __name__ == "__main__":
         try:
             with sr.Microphone() as source:
                 print("Listening...")
-                audio = r.listen(source,timeout=1,phrase_time_limit=0)
+                audio = r.listen(source,timeout=2,phrase_time_limit=1)
             word = r.recognize_google(audio)
             if(word.lower() == "jarvis"):
-                speak("Your Smart Jarvis Ai Assistant activated ...")
+                speak(" Smart Jarvis  Assistant activated , now speak ...")
             # if(word.lower() == " hey jarvis"):
             #     speak("Your Smart Jarvis Ai Assistant activated ... how may i help you sir")
             # if(word.lower() == " hi jarvis"):
