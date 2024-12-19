@@ -1,8 +1,15 @@
+import os # for pointing the directories 
+import eel # for connecting the frontend to our backend 
 import speech_recognition as sr
 import webbrowser
 import pyttsx3
 import requests
+eel.init("locall_repo") # we have told eel to look into this repo for our frontend 
 # from pocketsphinx import Decoder
+
+os.system('start msedge.exe  --app="http://localhost:8000/index.html"')
+
+eel.start('index.html',mode = None,host ='localhost',block=True)
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init() # initializes the ttsx3 module
